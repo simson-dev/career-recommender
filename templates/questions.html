@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Career Interest Test</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            min-height: 100vh;
+            padding: 30px 0;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 750px;
+            margin: auto;
+            background: white;
+            padding: 35px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        .intro {
+            text-align: center;
+            color: #666;
+            margin-bottom: 30px;
+            line-height: 1.5;
+        }
+
+        .question {
+            margin-bottom: 25px;
+        }
+
+        label {
+            display: block;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 10px;
+            font-size: 17px;
+        }
+
+        .emoji {
+            font-size: 23px;
+            margin-right: 5px;
+        }
+
+        select {
+            width: 100%;
+            padding: 13px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            font-size: 16px;
+            background: white;
+            cursor: pointer;
+        }
+
+        select:focus {
+            border-color: #667eea;
+            outline: none;
+            box-shadow: 0 0 5px rgba(102, 126, 234, 0.4);
+        }
+
+        button {
+            width: 100%;
+            padding: 16px;
+            border: none;
+            border-radius: 10px;
+            background: #667eea;
+            color: white;
+            font-size: 18px;
+            font-weight: bold;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+
+        button:hover {
+            background: #4f5fd5;
+        }
+
+        .note {
+            text-align: center;
+            margin-top: 15px;
+            color: #888;
+            font-size: 14px;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>🧠 Career Interest Test</h1>
+
+        <p class="intro">
+           Select the activities and interests you like. Based on your answers, we will recommend suitable career options.
+        </p>
+
+        <!-- IMPORTANT:
+             All questions are inside the form.
+        -->
+        <form id="careerForm" action="/result" method="POST">
+
+            <!-- Question 1 -->
+            <div class="question">
+
+                <label>
+                    <span class="emoji">💻</span>
+                    1. Any interest in Coding / Programming?
+                </label>
+
+                <select name="coding" required>
+
+                    <option value="">Select your interest</option>
+
+                    <option value="0">
+                        Not Interested
+                    </option>
+
+                    <option value="1">
+                        Little Interested
+                    </option>
+
+                    <option value="2">
+                        Interested
+                    </option>
+
+                    <option value="3">
+                        Very Interested
+                    </option>
+
+                    <option value="4">
+                        Highly Interested
+                    </option>
+
+                </select>
+
+            </div>
+
+
+            <!-- Question 2 -->
+            <div class="question">
+
+                <label>
+                    <span class="emoji">🎮</span>
+                    2. Any interest in Gaming / Game Development ?
+                </label>
+
+                <select name="gaming" required>
+
+                    <option value="">Select your interest</option>
+
+                    <option value="0">
+                        Not Interested
+                    </option>
+
+                    <option value="1">
+                        Little Interested
+                    </option>
+
+                    <option value="2">
+                        Interested
+                    </option>
+
+                    <option value="3">
+                        Very Interested
+                    </option>
+
+                    <option value="4">
+                        Highly Interested
+                    </option>
+
+                </select>
+
+            </div>
+
+
+            <!-- Question 3 -->
+            <div class="question">
+
+                <label>
+                    <span class="emoji">⚡</span>
+                    3. Any interest in Electrical / Electronics field?
+                </label>
+
+                <select name="electrical" required>
+
+                    <option value="">Select your interest</option>
+
+                    <option value="0">
+                        Not Interested
+                    </option>
+
+                    <option value="1">
+                        Little Interested
+                    </option>
+
+                    <option value="2">
+                        Interested
+                    </option>
+
+                    <option value="3">
+                        Very Interested
+                    </option>
+
+                    <option value="4">
+                        Highly Interested
+                    </option>
+
+                </select>
+
+            </div>
+
+
+            <!-- Question 4 -->
+            <div class="question">
+
+                <label>
+                    <span class="emoji">🔧</span>
+                    4. Any interest in Machines / Mechanical field ?
+                </label>
+
+                <select name="mechanical" required>
+
+                    <option value="">Select your interest</option>
+
+                    <option value="0">
+                        Not Interested
+                    </option>
+
+                    <option value="1">
+                        Little Interested
+                    </option>
+
+                    <option value="2">
+                        Interested
+                    </option>
+
+                    <option value="3">
+                        Very Interested
+                    </option>
+
+                    <option value="4">
+                        Highly Interested
+                    </option>
+
+                </select>
+
+            </div>
+
+
+            <!-- Question 5 -->
+            <div class="question">
+
+                <label>
+                    <span class="emoji">🎨</span>
+                    5. Any interest in Designing / Drawing / Creativity ?
+                </label>
+
+                <select name="design" required>
+
+                    <option value="">Select your interest</option>
+
+                    <option value="0">
+                        Not Interested
+                    </option>
+
+                    <option value="1">
+                        Little Interested
+                    </option>
+
+                    <option value="2">
+                        Interested
+                    </option>
+
+                    <option value="3">
+                        Very Interested
+                    </option>
+
+                    <option value="4">
+                        Highly Interested
+                    </option>
+
+                </select>
+
+            </div>
+
+
+            <!-- Question 6 -->
+            <div class="question">
+
+                <label>
+                    <span class="emoji">📊</span>
+                    6. Any interest in Maths & Problem Solving ?
+                </label>
+
+                <select name="maths" required>
+
+                    <option value="">Select your interest</option>
+
+                    <option value="0">
+                        Not Interested
+                    </option>
+
+                    <option value="1">
+                        Little Interested
+                    </option>
+
+                    <option value="2">
+                        Interested
+                    </option>
+
+                    <option value="3">
+                        Very Interested
+                    </option>
+
+                    <option value="4">
+                        Highly Interested
+                    </option>
+
+                </select>
+
+            </div>
+
+
+            <!-- Question 7 -->
+            <div class="question">
+
+                <label>
+                    <span class="emoji">💼</span>
+                    7. Any interest in Business / Management ?
+                </label>
+
+                <select name="business" required>
+
+                    <option value="">Select your interest</option>
+
+                    <option value="0">
+                        Not Interested
+                    </option>
+
+                    <option value="1">
+                        Little Interested
+                    </option>
+
+                    <option value="2">
+                        Interested
+                    </option>
+
+                    <option value="3">
+                        Very Interested
+                    </option>
+
+                    <option value="4">
+                        Highly Interested
+                    </option>
+
+                </select>
+
+            </div>
+
+
+            <!-- Question 8 -->
+            <div class="question">
+
+                <label>
+                    <span class="emoji">🗣️</span>
+                    8. Any interest in Teaching / Communication ?
+                </label>
+
+                <select name="communication" required>
+
+                    <option value="">Select your interest</option>
+
+                    <option value="0">
+                        Not Interested
+                    </option>
+
+                    <option value="1">
+                        Little Interested
+                    </option>
+
+                    <option value="2">
+                        Interested
+                    </option>
+
+                    <option value="3">
+                        Very Interested
+                    </option>
+
+                    <option value="4">
+                        Highly Interested
+                    </option>
+
+                </select>
+
+            </div>
+
+
+            <!-- Submit Button -->
+            <button type="submit">
+                Get My Career Recommendation 🎯
+            </button>
+
+        </form>
+
+        <p class="note">
+            💡 All questions are required
+        </p>
+
+    </div>
+
+</body>
+
+</html>

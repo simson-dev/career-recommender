@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Career Recommendation</title>
+
+    <style>
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 30px;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 700px;
+            background: white;
+            padding: 40px;
+            border-radius: 20px;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+        }
+
+        .emoji {
+            font-size: 60px;
+        }
+
+        h1 {
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        .subtitle {
+            color: #666;
+            font-size: 17px;
+            margin-bottom: 30px;
+        }
+
+        .career-box {
+            background: #f4f5ff;
+            padding: 25px;
+            border-radius: 15px;
+            margin-bottom: 25px;
+        }
+
+        .career-box h2 {
+            color: #667eea;
+            margin: 10px 0;
+        }
+
+        .percentage {
+            font-size: 35px;
+            font-weight: bold;
+            color: #764ba2;
+        }
+
+        .courses {
+            text-align: left;
+            margin-top: 25px;
+        }
+
+        .courses h3 {
+            color: #333;
+        }
+
+        .course {
+            background: #f8f8f8;
+            padding: 15px;
+            margin: 10px 0;
+            border-radius: 10px;
+            border-left: 5px solid #667eea;
+            font-weight: bold;
+            color: #444;
+        }
+
+        .button {
+            display: inline-block;
+            margin-top: 25px;
+            padding: 14px 25px;
+            background: #667eea;
+            color: white;
+            text-decoration: none;
+            border-radius: 10px;
+            font-weight: bold;
+        }
+
+        .button:hover {
+            background: #4f5fd5;
+        }
+
+        .message {
+            color: #777;
+            margin-top: 20px;
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+    <div class="container">
+
+        <div class="emoji">
+            🎯
+        </div>
+
+        <h1>
+            Your Career Recommendation
+        </h1>
+
+        <p class="subtitle">
+           Based on your interests, your suitable career path:
+        </p>
+
+
+        <div class="career-box">
+
+            <h2>
+                {{ career }}
+            </h2>
+
+            <div class="percentage">
+                {{ percentage }}%
+            </div>
+
+            <p>
+                Career Match
+            </p>
+
+        </div>
+
+
+        <div class="courses">
+
+            <h3>
+                📚 Recommended Courses
+            </h3>
+
+
+            {% for course in courses %}
+
+            <div class="course">
+
+                🎓 {{ course }}
+
+            </div>
+
+            {% endfor %}
+
+        </div>
+
+
+        <p class="message">
+            💡 Choose the course that matches your interest,
+            skills and future goals.
+        </p>
+
+
+        <a href="/questions" class="button">
+            🔄 Take Test Again
+        </a>
+
+        <br>
+
+        <a href="/" class="button">
+            🏠 Back to Home
+        </a>
+
+    </div>
+
+</body>
+
+</html>
