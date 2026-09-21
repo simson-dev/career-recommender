@@ -147,4 +147,4 @@ Recommended courses:
 ### Step 1: Clone the Repository
 
 ```bash
-git clone https://github.com/YOUR-USERNAME/career-recommender.git
+git clone https://github.com/simson-dev/career-recommender.git
